@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AguadulceComponent } from './aguadulce/aguadulce.component';
 import { AguasaladaComponent } from './aguasalada/aguasalada.component';
-import { ListComponent } from './list/list.component';
 
 const routes: Routes = [
   {path : 'aguadulce', component : AguadulceComponent},

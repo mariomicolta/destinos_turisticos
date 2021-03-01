@@ -1,3 +1,25 @@
-<destinos-list>
-    
-</destinos-list>
+<div class="container">
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+
+        <div *ngFor="let destino of DESTINOS">
+
+
+            <div class="col">
+                <div class="card" [class.bg-success]="destino.favorito == true" [class.text-white]="destino.favorito == true">
+                    <img src={{destino.foto}} class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{destino.nombre}}</h5>
+                        <p class="card-text">{{destino.descripcion}}</p>
+                        <a *ngIf="!destino.favorito" class="btn btn-primary" (click)="anadirFavorito(destino)">Agregar a favoritos</a>
+                        <a *ngIf="destino.favorito" class="btn btn-danger" (click)="anadirFavorito(destino)">Quitar de favoritos</a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
